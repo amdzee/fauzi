@@ -20,6 +20,9 @@
 <!-- diatas adalah file import jquery dan js -->
 <script>
     $(Document).ready(function(){
+        function getdata() {
+        console.log("form telah disubmit");
+    })
     $("form").submit(function(even){
         console.log("form telah disubmit");
     })

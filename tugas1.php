@@ -24,80 +24,98 @@
                     </div>
                     <div class="card-body">
                         <form action="" method="POST">
-                        <!-- Ini akan berisi halaman form-->
-                        <div class="form-floating mb-1">
-                            <input type="text" name="nama" class="form-control" id="fiNama" placeholder="name@example.com">
-                            <label for="fiNama">Nama</label>
-                        </div>
-                        <div class="form-floating mb-1">
-                            <input type="email" name="email" class="form-control" id="fiEmail" placeholder="name@example.com">
-                            <label for="fiEmail">Email</label>
-                        </div>
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here"
-                                id="floatingTextarea" name="alamat"></textarea>
-                            <label for="floatingTextarea" >Alamat</label>
-                        </div>
+                            <!-- Ini akan berisi halaman form-->
+                            <div class="form-floating mb-1">
+                                <input type="text" name="nama" class="form-control" id="fiNama"
+                                    placeholder="name@example.com">
+                                <label for="fiNama">Nama</label>
+                            </div>
+                            <div class="form-floating mb-1">
+                                <input type="email" name="email" class="form-control" id="fiEmail"
+                                    placeholder="name@example.com">
+                                <label for="fiEmail">Email</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                                    name="alamat"></textarea>
+                                <label for="floatingTextarea">Alamat</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="laki" value="Laki-laki">
+                                <label class="form-check-label" for="laki" >
+                                    Laki-laki
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="perempuan" value="Perempuan">
+                                <label class="form-check-label" for="perempuan">
+                                    Perempuan
+                                </label>
+                            
+                            <div class="form-floating mt-2">
+                                <select class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example" name="program">
+                                    <option selected disabled>Pilih</option>
+                                    <option value="Junior Web Developer">Junior Web Developer</option>
+                                    <option value="Digital Marketing">Digital Marketing</option>
+                                    <option value="Content Creator">Content Creator</option>
+                                    <option value="Desainer Multimedia Muda">Desainer Multimedia Muda</option>
+                                </select>
+                                <label for="floatingSelect">Program Pelatihan</label>
+                            </div>
 
-                        <div class="form-floating mt-2">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="program">
-                                <option selected disabled>Pilih</option>
-                                <option value="Junior Web Developer">Junior Web Developer</option>
-                                <option value="Digital Marketing">Digital Marketing</option>
-                                <option value="Content Creator">Content Creator</option>
-                                <option value="Desainer Multimedia Muda">Desainer Multimedia Muda</option>
-                            </select>
-                            <label for="floatingSelect">Program Pelatihan</label>
-                        </div>
-
-                        <div class="form-floating mt-2">
-                            <select class="form-select" id="fsTahun" aria-label="Floating label select example" name="tahun">
-                                <option selected disabled>Pilih Tahun</option>
-                                <?php
+                            <div class="form-floating mt-2">
+                                <select class="form-select" id="fsTahun" aria-label="Floating label select example"
+                                    name="tahun">
+                                    <option selected disabled>Pilih Tahun</option>
+                                    <?php
                                   for($a=2000;$a<=2023;$a++):?>
-                                  <option value="<?= $a;?>">
-                                    <?= $a;?>
-                                  </option>
-                                <?php endfor;?>
-                            </select>
-                            <label for="fsTahun">Tahun Daftar</label>
-                        </div>
+                                    <option value="<?= $a;?>">
+                                        <?= $a;?>
+                                    </option>
+                                    <?php endfor;?>
+                                </select>
+                                <label for="fsTahun">Tahun Daftar</label>
+                            </div>
 
-                       
-                        <input type="submit" class="btn btn-success mt-3 col-12" value="Daftar" name="submit">
-                        <!-- inget yg di panggil dan di sesuaikan adalah tag name bukan type atau apapun yaaa, case disini tadi salah kaprah pada submit di type dan name -->
-                        
+
+                            <input type="submit" class="btn btn-success mt-3 col-12" value="Daftar" name="submit">
+                            <!-- inget yg di panggil dan di sesuaikan adalah tag name bukan type atau apapun yaaa, case disini tadi salah kaprah pada submit di type dan name -->
+
                         </form>
                     </div>
 
                     <div class="card-footer text-center">
                         <!-- coding isset  sebelumnya -->
-                            <!-- iiset artinya terisi jd kalo ada isinya dia akan muncul -->
-                            <div class="spinner-border text-info" role="status" style="display:none;">
+                        <!-- iiset artinya terisi jd kalo ada isinya dia akan muncul -->
+                        <div class="spinner-border text-info" role="status" style="display:none;">
                             <!-- tag di atas untuk memunculkan efek loading ada di web boostrap tinggal copas tapi tambahin css inline style display supaya dia ngumpet dulu pas di enter input baru muncul, gitu ya -->
                             <span class="visually-hidden">Loading...</span>
-                            </div>
+                        </div>
                         <div class="table-responsive">
-                        <table class="table">
-                        <thead class="table-dark">
-                        <tr>
-                          <th>Nama</th>
-                          <th>Email</th>
-                          <th>Alamat</th>
-                          <th>Program</th>
-                          <th>Tahun</th>
-                          </tr>
-                        </thead>
-                            <tbody>
-                               
-                            </tbody>
-                        </table>
+                            <table class="table">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>Alamat</th>
+                                        <th>Gender</th>
+                                        <th>Program</th>
+                                        <th>Tahun</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
                         </div>
                         <!-- end if coding ada disini sebelumnya -->
-                            <!-- gunanya end if untuk mengakhiri  -->
-                      <!-- <h5>copyright @2023</h5> -->
+                        <!-- gunanya end if untuk mengakhiri  -->
+                        <!-- <h5>copyright @2023</h5> -->
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -108,49 +126,75 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="bootstrap-5.1.3-dist/js/jquery-3.6.4.min.js">
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script>
     <script>
-    $(document).ready(function(){   
-                $("form").submit(function(event){
-                     event.preventDefault();
-                    //  console.log("form telah disubmit");
-                    var nama= $("#fiNama").val();
-                    var email= $("#fiEmail").val();
-                    var alamat= $("#floatingTextarea").val();
-                    var program= $("#floatingSelect").val();
-                    var tahun= $("#fsTahun").val();
-// var untuk variabel, val untuk value, jadi di atas inggin memanggil sebuah variabel yang memiliki nilai .... dan kenapa make hasrag bukan titik karena saat membuat variabel tag nya berupa id bukan class, inget lah ya kalo tag isinya id maka kalo di panggil make # 
-                    var formData = {
-                        nama: nama,
-                        email: email,
-                        alamat: alamat,
-                        program: program,
-                        tahun: tahun
-// sebelumnya nama email dll di kanan yg di atas ini di kasih kutip dua ya alias sedang di panggil, krn buat pemanggil baru tuh var di atasnya lagi makanya di ilangin kutipnya supaya gak bingung manggilnya dan tetap berjalan
-                    }
-                    $.ajax ({
-                        type:"POST",
-                        url: "process.php",
-                        data: formData,
-                        beforeSend: function(result) {
-                            $(".spinner-border").show()
-                        },
-                        success: function(result){
-                            $(".spinner-border").hide(10000)
-                            $("tbody").append(result);
-                            $("form")[0].reset(result);
-                        // tag di atas di gunakan agar saat mengisi dan menginput data, akan kembali ter reset alias kosong di dan dapat langsung di isi kembali untuk data yg baru
-                            // append artinya menambahkan, yg berarti menambahkan si tbody yg memuat bbrp data di atas yg mencakup t body itu yg sdh di ketik sebelumnya, dan untuk 0 knp gunanya untuk mempengaruhi jumblah form yg ada kalo 0 berarti untuk form yg ke 1
-                                // $("table").hide();
+    $(document).ready(function() {
+        // get data di bawah agar isi dari get data dapat muncul maka di tautkan disini
+        getdata();
 
-                                 }
-                            })
-                    })
-       
-                    })
+        function getdata() {
+
+            $.ajax({
+                type: "GET",
+                url: "get_data.php",
+                beforeSend: function(result) {
+                    $(".spinner-border").show()
+                },
+                success: function(result) {
+                    $(".spinner-border").hide(10000)
+                    $("tbody").html(result);
+                    // tag di atas di gunakan agar saat mengisi dan menginput data, akan kembali ter reset alias kosong di dan dapat langsung di isi kembali untuk data yg baru
+                    // append artinya menambahkan, yg berarti menambahkan si tbody yg memuat bbrp data di atas yg mencakup t body itu yg sdh di ketik sebelumnya, dan untuk 0 knp gunanya untuk mempengaruhi jumblah form yg ada kalo 0 berarti untuk form yg ke 1
+                    // $("table").hide();
+
+                }
+            })
+        }
+        $("form").submit(function(event) {
+            event.preventDefault();
+            //  console.log("form telah disubmit");
+            var nama = $("#fiNama").val();
+            var email = $("#fiEmail").val();
+            var alamat = $("#floatingTextarea").val();
+            // js untuk pilihan radio button, memakai class dan value checked
+            var gender = $(".form-check-input:checked").val();
+        
+            var program = $("#floatingSelect").val();
+            var tahun = $("#fsTahun").val();
+            // var untuk variabel, val untuk value, jadi di atas inggin memanggil sebuah variabel yang memiliki nilai .... dan kenapa make hasrag bukan titik karena saat membuat variabel tag nya berupa id bukan class, inget lah ya kalo tag isinya id maka kalo di panggil make # 
+            var formData = {
+                nama: nama,
+                email: email,
+                alamat: alamat,
+                gender: gender,
+                program: program,
+                tahun: tahun
+                // sebelumnya nama email dll di kanan yg di atas ini di kasih kutip dua ya alias sedang di panggil, krn buat pemanggil baru tuh var di atasnya lagi makanya di ilangin kutipnya supaya gak bingung manggilnya dan tetap berjalan
+            }
+            $.ajax({
+                type: "POST",
+                url: "process.php",
+                data: formData,
+                beforeSend: function(result) {
+                    $(".spinner-border").show()
+                },
+                success: function(result) {
+                    $(".spinner-border").hide(1000)
+                    $("tbody").append(result);
+                    $("form")[0].reset(result);
+                    getdata();
+                    // tag di atas di gunakan agar saat mengisi dan menginput data, akan kembali ter reset alias kosong di dan dapat langsung di isi kembali untuk data yg baru
+                    // append artinya menambahkan, yg berarti menambahkan si tbody yg memuat bbrp data di atas yg mencakup t body itu yg sdh di ketik sebelumnya, dan untuk 0 knp gunanya untuk mempengaruhi jumblah form yg ada kalo 0 berarti untuk form yg ke 1
+                    // $("table").hide();
+
+                }
+            })
+        })
+
+    })
     </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

@@ -1,0 +1,26 @@
+[
+    {
+        "nama": "udin",
+        "email": "fauzilhakesis@gmail.com",
+        "alamat": "sss",
+        "gender": "Perempuan",
+        "program": "Digital Marketing",
+        "tahun": "2007"
+    },
+    {
+        "nama": "ahm",
+        "email": "fauzilhakesis@gmail.com",
+        "alamat": "dddd",
+        "gender": "Laki-laki",
+        "program": "Content Creator",
+        "tahun": "2013"
+    },
+    {
+        "nama": "udin",
+        "email": "fauzilhakesis@gmail.com",
+        "alamat": "ssss",
+        "gender": "Perempuan",
+        "program": "Junior Web Developer",
+        "tahun": "2000"
+    }
+]
